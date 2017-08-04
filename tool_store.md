@@ -4,7 +4,7 @@ Tools Store
 This files stores random code snippets that could help you in working with Tools used in Elixir.
 
 
-######Labels: golang, testing
+###### Labels: golang, testing
 Testing with go
 ```go
 package hello_test
@@ -30,12 +30,20 @@ func (s *MySuite) TestHelloWorld(c *C) {
 }
 ```
 -------------------------------------
+```sh
+$ go test -check.f MyTestSuite
+$ go test -check.f "Test.*Works"
+$ go test -check.f "MyTestSuite.Test.*Works"
+```
+-------------------------------------
 
-######Labels: docker, testing
+###### Labels: docker, testing
 Testing docker containers
 
 ```yml
 sut:
   build: .
   command: run_tests.sh
+  #environment:
+  #  - SOURCE_BRANCH
 ```

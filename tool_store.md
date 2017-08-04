@@ -47,3 +47,24 @@ sut:
   #environment:
   #  - SOURCE_BRANCH
 ```
+-------------------------------------
+
+```git
+/mainrepository
+/mainrepository/subrepository
+
+cd /mainrepository/subrepository;
+git init .
+cd ../
+git submodule add ./subrepository
+
+then open seperate remote repository in bit bucket then
+cd into ./subrepository
+git remote add origin https://bitbucket.com/path/to/subrepository.git
+```
+------------------------------------------
+#### git add submodule
+```git
+  git rm -r --cached .
+  git submodule add https://github.com/akinsbo/testing-e2e.git ./testing-e2e
+```
